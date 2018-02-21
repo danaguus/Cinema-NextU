@@ -1,0 +1,155 @@
+.cinema-body {
+  background: url("../img/fondo.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  font-family: 'Courgette', cursive !important;
+}
+.titulo-cartelera {
+  width: 100%;
+  min-height: 45px;
+  background: #225087;
+  color: white;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  opacity: 0.9;
+}
+.movies-row {
+  min-height: 350px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  padding-top: 10px;
+}
+.movies-column {
+  margin-top: 5px;
+  min-height: 330px;
+  color: white;
+}
+.left-column {
+  border-right-width: 1px;
+  border-right-style: dashed;
+  border-right-color: white;
+}
+.logo {
+  width: 16vh;
+}
+.logo-jumbotron {
+  height: 25vh;
+}
+.social-img {
+  height: 7vh;
+  margin-left: 0.3vw;
+  margin-right: 0.3vw;
+  transition: transform 0.6s;
+}
+.social-img:hover {
+  transform: scale(1.3);
+}
+.img-movie {
+  height: 260px;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  filter: grayscale(100%);
+  transition: transform 1s, filter 1s;
+}
+.img-movie:hover {
+  transform: scale(1.1) translateY(-2.5%);
+  filter: grayscale(0);
+}
+
+/* Clases con los nombres de las animaciones disponibles */
+.animation-zoom {
+  animation-name: kf-zoom;
+}
+.animation-slide-ltr {
+  animation-name: kf-slide-ltr;
+}
+.animation-slide-rtl {
+  animation-name: kf-slide-rtl;
+}
+.animation-appear {
+  animation-name: kf_appear;
+}
+
+/* Clases para la duración de las animaciones (en intervalos de 0.5 segundos, van desde 1 hasta 4 segundos)*/
+.animation-duration-1s {
+  animation-duration: 1s;
+}
+.animation-duration-1-5s {
+  animation-duration: 1.5s;
+}
+.animation-duration-2s {
+  animation-duration: 2s;
+}
+.animation-duration-2-5s {
+  animation-duration: 2.5s;
+}
+.animation-duration-3s {
+  animation-duration: 3s;
+}
+.animation-duration-3-5s {
+  animation-duration: 3.5s;
+}
+.animation-duration-4s {
+  animation-duration: 4s;
+}
+
+#header {
+  min-height: 10%;
+  background-color: #1A3452;
+  border: none;
+}
+#container {
+  margin-top: 0.2%;
+  width: 100%;
+}
+
+div[class="jumbotron"] {
+  min-height: 530px;
+  background: url("../img/jumbotron1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
+  border-radius: 0;
+  width: 100%;
+  color: white;
+}
+
+@media (max-width: 770px) {
+  .right-column {
+    display: none;
+  }
+  .movies-row {
+    min-height: 250px;
+  }
+  .movies-column {
+    min-height: 230px;
+  }
+  div[class="jumbotron"] {
+    min-height: 350px;
+  }
+}
+
+@keyframes kf-zoom {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+@keyframes kf-slide-ltr {
+  0% { transform: translateX(-100%); opacity: 0; }
+  50% { transform: translateX(20%); opacity: 0.8; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes kf-slide-rtl {
+  0% { transform: translateX(100%); opacity: 0; }
+  50% { transform: translateX(-20%); opacity: 0.5; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes kf-appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
